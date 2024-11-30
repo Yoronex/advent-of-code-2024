@@ -1,0 +1,1 @@
+add_executable(Solution Solution.cpp Solution.h)
