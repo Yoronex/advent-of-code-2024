@@ -14,7 +14,7 @@ public:
 
 private:
     std::string inputALocation = "../puzzles/day1/input_a.txt";
-    std::string inputBLocation = "../puzzles/day1/input_b.txt";
+    std::string inputBLocation = "../puzzles/day1/input_a.txt";
 };
 
 

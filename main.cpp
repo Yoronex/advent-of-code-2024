@@ -4,7 +4,7 @@
 
 int main() {
 
-    auto solution = Day1().solutionA();
+    auto solution = Day1().solutionB();
     std::cout << "Solution for " << solution.first << ": " << solution.second << std::endl;
 
     return 0;
