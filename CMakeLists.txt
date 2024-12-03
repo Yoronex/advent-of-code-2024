@@ -4,4 +4,6 @@ include_directories(puzzles)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(advent_of_code_2024 main.cpp puzzles/base/Solution.cpp puzzles/day1/Day1.cpp puzzles/day2/Day2.cpp)
+add_executable(advent_of_code_2024 main.cpp puzzles/base/Solution.cpp puzzles/day1/Day1.cpp puzzles/day2/Day2.cpp
+        puzzles/day3/Day3.cpp
+        puzzles/day3/Day3.h)
