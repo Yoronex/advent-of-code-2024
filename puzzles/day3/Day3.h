@@ -8,7 +8,6 @@
 
 
 class Day3 final : public Solution {
-
 public:
     std::pair<std::string, int> solutionA() override;
     std::pair<std::string, int> solutionB() override;

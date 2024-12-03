@@ -9,10 +9,6 @@
 #include <string>
 #include <map>
 
-bool comp(const int a, const int b) {
-    return a < b;
-}
-
 std::pair<std::string, int> Day1::solutionA() {
     const auto input = readInput(inputALocation);
     std::vector<std::pair<int, int>> matrix;

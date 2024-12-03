@@ -22,4 +22,8 @@ protected:
   std::vector<std::string> split(const std::string &s, const std::string &delim);
 };
 
+inline bool comp(const int a, const int b) {
+  return a < b;
+}
+
 #endif //SOLUTION_H
