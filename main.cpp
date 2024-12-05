@@ -3,10 +3,11 @@
 #include "day2/Day2.h"
 #include "day3/Day3.h"
 #include "day4/Day4.h"
+#include "day5/Day5.h"
 
 int main() {
 
-    auto const solution = Day4().solutionB();
+    auto const solution = Day5().solutionB();
     std::cout << "Solution for " << solution.first << ": " << solution.second << std::endl;
 
     return 0;
