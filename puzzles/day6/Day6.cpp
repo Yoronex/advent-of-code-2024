@@ -276,7 +276,7 @@ std::set<std::pair<int, int>> day6GetPositions(const std::vector<std::string> &i
     return positions;
 }
 
-std::pair<std::string, int> Day6::solutionA() {
+std::pair<std::string, long long> Day6::solutionA() {
     std::vector<std::string> input = readInput(inputALocation);
     // day6PrintGrid(input);
 
@@ -308,7 +308,7 @@ bool day6IsLooping(std::vector<std::string> &grid) {
     return false;
 }
 
-std::pair<std::string, int> Day6::solutionB() {
+std::pair<std::string, long long> Day6::solutionB() {
     const std::vector<std::string> input = readInput(inputALocation);
     std::vector<std::string> grid = input;
 

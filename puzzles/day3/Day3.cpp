@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-std::pair<std::string, int> Day3::solutionA() {
+std::pair<std::string, long long> Day3::solutionA() {
     auto input = readInput(inputALocation);
 
     int sum = 0;
@@ -37,7 +37,7 @@ std::pair<std::string, int> Day3::solutionA() {
     return std::make_pair("Day 3a", sum);
 }
 
-std::pair<std::string, int> Day3::solutionB() {
+std::pair<std::string, long long> Day3::solutionB() {
     auto input = readInput(inputALocation);
 
     int sum = 0;

@@ -10,7 +10,7 @@
 #include <map>
 
 
-std::pair<std::string, int> Day2::solutionA() {
+std::pair<std::string, long long> Day2::solutionA() {
     const auto input = readInput(inputALocation);
     std::vector<std::vector<int>> matrix;
     std::vector<int> safeInputs;
@@ -88,7 +88,7 @@ bool Day2::solution_isSafe(const std::vector<int> &row) {
     return true;
 }
 
-std::pair<std::string, int> Day2::solutionB() {
+std::pair<std::string, long long> Day2::solutionB() {
     const auto input = readInput(inputALocation);
     std::vector<std::vector<int>> matrix;
     std::vector<int> safeInputs;

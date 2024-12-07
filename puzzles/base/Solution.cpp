@@ -37,10 +37,10 @@ std::vector<std::string> Solution::split(const std::string &toSplit, const std::
 
 //Solution::~Solution() = default;
 
-std::pair<std::string, int> Solution::solutionA() {
+std::pair<std::string, long long> Solution::solutionA() {
     return {"defaultA", 0};
 }
 
-std::pair<std::string, int> Solution::solutionB() {
+std::pair<std::string, long long> Solution::solutionB() {
     return {"defaultB", 0};
 }

@@ -9,7 +9,7 @@
 #include <string>
 #include <map>
 
-std::pair<std::string, int> Day1::solutionA() {
+std::pair<std::string, long long> Day1::solutionA() {
     const auto input = readInput(inputALocation);
     std::vector<std::pair<int, int>> matrix;
     std::vector<int> leftCol;
@@ -48,7 +48,7 @@ std::pair<std::string, int> Day1::solutionA() {
     return std::make_pair("Day 1a", sum);
 }
 
-std::pair<std::string, int> Day1::solutionB() {
+std::pair<std::string, long long> Day1::solutionB() {
     const auto input = readInput(inputALocation);
     std::vector<std::pair<int, int>> matrix;
     std::vector<int> leftCol;

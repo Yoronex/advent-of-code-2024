@@ -14,7 +14,7 @@ bool day4IsXmasB(const std::string &input) {
     return input == "MAS" || input == "SAM";
 }
 
-std::pair<std::string, int> Day4::solutionA() {
+std::pair<std::string, long long> Day4::solutionA() {
     const auto input = readInput(inputALocation);
     const int rows = input.size();
     const int cols = input[0].size();
@@ -59,7 +59,7 @@ std::pair<std::string, int> Day4::solutionA() {
 
     return std::make_pair("day 4a", occurences);
 }
-std::pair<std::string, int> Day4::solutionB() {
+std::pair<std::string, long long> Day4::solutionB() {
     const auto input = readInput(inputALocation);
     const int rows = input.size();
     const int cols = input[0].size();

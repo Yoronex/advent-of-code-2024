@@ -9,7 +9,7 @@
 #include <map>
 #include <set>
 
-std::pair<std::string, int> Day5::solutionA() {
+std::pair<std::string, long long> Day5::solutionA() {
     const auto input = readInput(inputALocation);
 
     std::map<int, std::set<int>> rulesXBeforeY;
@@ -88,7 +88,7 @@ std::pair<std::string, int> Day5::solutionA() {
 
     return std::make_pair("day 5a", sum);
 }
-std::pair<std::string, int> Day5::solutionB() {
+std::pair<std::string, long long> Day5::solutionB() {
     const auto input = readInput(inputALocation);
 
     std::map<int, std::set<int>> rulesXBeforeY;

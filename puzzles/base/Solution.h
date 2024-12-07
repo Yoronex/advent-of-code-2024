@@ -12,8 +12,8 @@ class Solution {
 public:
   virtual ~Solution() = default;
 
-  virtual std::pair<std::string, int> solutionA();
-  virtual std::pair<std::string, int> solutionB();
+  virtual std::pair<std::string, long long> solutionA();
+  virtual std::pair<std::string, long long> solutionB();
 protected:
   std::string inputALocation;
   std::string inputBLocation;

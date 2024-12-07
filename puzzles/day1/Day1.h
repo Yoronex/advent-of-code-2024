@@ -9,8 +9,8 @@
 
 class Day1 final : public Solution {
 public:
-    std::pair<std::string, int> solutionA() override;
-    std::pair<std::string, int> solutionB() override;
+    std::pair<std::string, long long> solutionA() override;
+    std::pair<std::string, long long> solutionB() override;
 
 private:
     std::string inputALocation = "../puzzles/day1/input_a.txt";
