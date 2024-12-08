@@ -7,13 +7,14 @@
 #include "day5/Day5.h"
 #include "day6/Day6.h"
 #include "day7/Day7.h"
+#include "day8/Day8.h"
 
 int main() {
 
     std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
     auto startTime = now.time_since_epoch();
 
-    auto const solution = Day7::Day7().solutionB();
+    auto const solution = Day8::Day8().solutionB();
 
     now = std::chrono::system_clock::now();
     auto finishTime = now.time_since_epoch();
