@@ -8,6 +8,11 @@
 #include <vector>
 #include <string>
 
+struct Position {
+  int x;
+  int y;
+};
+
 class Solution {
 public:
   virtual ~Solution() = default;

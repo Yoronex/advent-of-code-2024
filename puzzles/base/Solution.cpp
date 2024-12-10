@@ -7,6 +7,22 @@
 #include <iostream>
 #include <fstream>
 
+bool operator<(const Position &lhs, const Position &rhs) {
+    if (lhs.x < rhs.x) return true;
+    if (lhs.x > rhs.x) return false;
+    if (lhs.y < rhs.y) return true;
+    if (lhs.y > rhs.y) return false;
+    return false;
+}
+
+bool operator>(const Position &lhs, const Position &rhs) {
+    return rhs < lhs;
+}
+
+bool operator==(const Position &lhs, const Position &rhs) {
+    return !(rhs < lhs) && !(rhs > lhs);
+}
+
 std::vector<std::string> Solution::readInput(const std::string &fileLocation) {
     std::ifstream file(fileLocation);
 
