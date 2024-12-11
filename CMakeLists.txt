@@ -26,4 +26,6 @@ add_executable(advent_of_code_2024 main.cpp
         puzzles/day9/Day9.cpp
         puzzles/day9/Day9.h
         puzzles/day10/Day10.cpp
-        puzzles/day10/Day10.h)
+        puzzles/day10/Day10.h
+        puzzles/day11/Day11.cpp
+        puzzles/day11/Day11.h)
