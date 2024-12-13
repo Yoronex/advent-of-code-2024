@@ -19,6 +19,11 @@ namespace Day10 {
         return z == currentHeight + 1;
     }
 
+    bool isValidStep(const Grid<int> &grid, int currentHeight, const Position &newPosition) {
+        if (!grid.has(newPosition)) return false;
+        return grid.get(newPosition) == currentHeight + 1;
+    }
+
     std::set<std::pair<long long, long long>> findHikingTrailFinishPoints(const std::vector<std::string> &grid, const std::pair<long long, long long> &currentPosition) {
         const long long x = currentPosition.first;
         const long long y = currentPosition.second;
@@ -71,28 +76,28 @@ namespace Day10 {
         return std::make_pair("day 10a", scoreSum);
     }
 
-    std::vector<std::pair<long long, long long>> findHikingTrailFinishPointsPaths(const std::vector<std::string> &grid, const std::pair<long long, long long> &currentPosition) {
-        const long long x = currentPosition.first;
-        const long long y = currentPosition.second;
-        const long long z = std::stoll(grid[y].substr(x, 1));
+    std::vector<Position> findHikingTrailFinishPointsPaths(const Grid<int> &grid, const Position &currentPosition) {
+        const int x = currentPosition.x;
+        const int y = currentPosition.y;
+        const int z = grid.get(currentPosition);
 
-        std::vector<std::pair<long long, long long>> endPoints{};
+        std::vector<Position> endPoints{};
 
         if (z == 9) {;
             endPoints.push_back(currentPosition);
             return endPoints;
         }
 
-        const std::set<std::pair<long long, long long>> newPositions{
-            std::make_pair(x, y - 1),
-            std::make_pair(x, y + 1),
-            std::make_pair(x - 1, y),
-            std::make_pair(x + 1, y),
+        const std::set<Position> newPositions{
+            {x, y - 1},
+            {x, y + 1},
+            {x - 1, y},
+            {x + 1, y},
         };
 
         for (auto newPosition : newPositions) {
             if (isValidStep(grid, z, newPosition)) {
-                std::vector<std::pair<long long, long long>> endpointsByStep = findHikingTrailFinishPointsPaths(grid, newPosition);
+                std::vector<Position> endpointsByStep = findHikingTrailFinishPointsPaths(grid, newPosition);
                 for (const auto &pair : endpointsByStep)
                     endPoints.emplace_back(pair);
             }
@@ -103,14 +108,14 @@ namespace Day10 {
 
     std::pair<std::string, long long> Day10::solutionB() {
         const std::vector<std::string> input = readInput(inputBLocation);
-        const long long width = input[0].size();
-        const long long height = input.size();
+        Grid<std::string> grid(input);
 
-        std::vector<std::pair<long long, long long>> startingPoints;
-        for (long long x = 0; x < width; x++) {
-            for (long long y = 0; y < height; y++) {
+        std::vector<Position> startingPoints;
+        for (int x = 0; x < grid.getWidth(); x++) {
+            for (int y = 0; y < grid.getHeight(); y++) {
                 if (input[y][x] == '0') {
-                    startingPoints.emplace_back(x, y);
+                    Position p = {x, y};
+                    startingPoints.emplace_back(p);
                 }
             }
         }
