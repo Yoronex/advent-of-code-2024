@@ -5,6 +5,8 @@
 #include "Day13.h"
 #include <cmath>
 
+#include "base/Grid.h"
+
 namespace Day13 {
 
     struct Game {

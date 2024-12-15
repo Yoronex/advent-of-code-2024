@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(advent_of_code_2024 main.cpp
         puzzles/base/Solution.h
         puzzles/base/Solution.cpp
+        puzzles/base/Grid.h
+        puzzles/base/Grid.cpp
         puzzles/day1/Day1.h
         puzzles/day1/Day1.cpp
         puzzles/day2/Day2.h
@@ -34,4 +36,8 @@ add_executable(advent_of_code_2024 main.cpp
         puzzles/day13/Day13.cpp
         puzzles/day13/Day13.h
         puzzles/day14/Day14.cpp
-        puzzles/day14/Day14.h)
+        puzzles/day14/Day14.h
+        puzzles/day15/Day15.cpp
+        puzzles/day15/Day15.h
+        puzzles/base/Grid.cpp
+        puzzles/base/Grid.h)

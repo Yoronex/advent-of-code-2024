@@ -6,6 +6,8 @@
 
 #include <set>
 
+#include "base/Grid.h"
+
 namespace Day10 {
     bool isValidStep(const std::vector<std::string> &grid, long long currentHeight, const std::pair<long long, long long> &newPosition) {
         const long long gridWidth = grid[0].size();

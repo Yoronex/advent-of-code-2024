@@ -9,6 +9,8 @@
 #include <iostream>
 #include <set>
 
+#include "base/Grid.h"
+
 namespace Day14 {
     struct Robot {
         Position initialPosition;
