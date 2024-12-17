@@ -40,4 +40,6 @@ add_executable(advent_of_code_2024 main.cpp
         puzzles/day15/Day15.cpp
         puzzles/day15/Day15.h
         puzzles/base/Grid.cpp
-        puzzles/base/Grid.h)
+        puzzles/base/Grid.h
+        puzzles/day16/Day16.cpp
+        puzzles/day16/Day16.h)

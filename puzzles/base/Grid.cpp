@@ -7,6 +7,19 @@
 #include "Grid.h"
 #include "algorithm"
 
+template<class T>
+Grid<T>::Grid(long long width, long long height, const T &defaultValue) {
+    m_grid.reserve(height);
+    for (long long y = 0; y < height; y++) {
+        std::vector<T> row;
+        row.reserve(width);
+        for (long long x = 0; x < width; x++) {
+            row.push_back(defaultValue);
+        }
+        m_grid.push_back(row);
+    }
+}
+
 // template<>
 // unsigned long long Grid<std::string>::getHeight() const { return m_grid.size(); }
 // template<>
@@ -162,18 +175,6 @@ Grid<long long>::Grid(const std::vector<std::string> &grid) {
             return std::stoll(s);
         });
         m_grid.emplace_back(newRowLongLong);
-    }
-}
-template<>
-Grid<int>::Grid(long long width, long long height, const int &defaultValue) {
-    m_grid.reserve(height);
-    for (long long y = 0; y < height; y++) {
-        std::vector<int> row;
-        row.reserve(width);
-        for (long long x = 0; x < width; x++) {
-            row.push_back(defaultValue);
-        }
-        m_grid.push_back(row);
     }
 }
 
