@@ -18,8 +18,8 @@ protected:
   std::string inputALocation;
   std::string inputBLocation;
 
-  std::vector<std::string> readInput(const std::string &fileLocation);
-  std::vector<std::string> split(const std::string &s, const std::string &delim);
+  std::vector<std::string> readInput(const std::string &fileLocation) const;
+  std::vector<std::string> split(const std::string &s, const std::string &delim) const;
 };
 
 inline bool comp(const int a, const int b) {

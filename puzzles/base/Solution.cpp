@@ -8,7 +8,7 @@
 #include <iostream>
 #include <fstream>
 
-std::vector<std::string> Solution::readInput(const std::string &fileLocation) {
+std::vector<std::string> Solution::readInput(const std::string &fileLocation) const {
     std::ifstream file(fileLocation);
 
     std::vector<std::string> lines;
@@ -20,7 +20,7 @@ std::vector<std::string> Solution::readInput(const std::string &fileLocation) {
     return lines;
 };
 
-std::vector<std::string> Solution::split(const std::string &toSplit, const std::string &delimiter) {
+std::vector<std::string> Solution::split(const std::string &toSplit, const std::string &delimiter) const {
     std::string s = toSplit;
 
     std::vector<std::string> tokens;
